@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pod_kategoriyas",
+  "info": {
+    "singularName": "pod-kategoriya",
+    "pluralName": "pod-kategoriyas",
+    "displayName": "Под категория",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "pod_kategoriyas"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "tovaries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tovary.tovary",
+      "mappedBy": "pod_kategoriya"
+    },
+    "slug": {
+      "type": "customField",
+      "options": {
+        "pattern": "id"
+      },
+      "customField": "plugin::slug.slug"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
