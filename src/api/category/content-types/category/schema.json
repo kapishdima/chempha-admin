@@ -30,6 +30,22 @@
         "application"
       ],
       "required": true
+    },
+    "tovaries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tovary.tovary",
+      "mappedBy": "kategoriya"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

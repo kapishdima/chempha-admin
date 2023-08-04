@@ -28,22 +28,16 @@
       "target": "api::tovary.tovary",
       "mappedBy": "pod_kategoriya"
     },
-    "slug": {
-      "type": "customField",
-      "options": {
-        "pattern": "id"
-      },
-      "customField": "plugin::slug.slug"
-    },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }
