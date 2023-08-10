@@ -22,12 +22,6 @@
       "type": "string",
       "required": true
     },
-    "tovaries": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::tovary.tovary",
-      "mappedBy": "pod_kategoriya"
-    },
     "image": {
       "type": "media",
       "multiple": false,
@@ -38,6 +32,12 @@
         "videos",
         "audios"
       ]
+    },
+    "tovaries": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tovary.tovary",
+      "mappedBy": "pod_kategoriyas"
     }
   }
 }

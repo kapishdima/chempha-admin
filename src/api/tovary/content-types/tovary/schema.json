@@ -16,9 +16,9 @@
       "type": "string",
       "required": true
     },
-    "pod_kategoriya": {
+    "pod_kategoriyas": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::pod-kategoriya.pod-kategoriya",
       "inversedBy": "tovaries"
     },
@@ -43,9 +43,9 @@
       },
       "customField": "plugin::ckeditor5.CKEditor"
     },
-    "kategoriya": {
+    "kategoriyas": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::category.category",
       "inversedBy": "tovaries"
     }
