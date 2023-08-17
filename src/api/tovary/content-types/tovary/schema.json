@@ -33,8 +33,11 @@
         "audios"
       ]
     },
-    "excert": {
-      "type": "richtext"
+    "kategoriyas": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "tovaries"
     },
     "description": {
       "type": "customField",
@@ -43,11 +46,12 @@
       },
       "customField": "plugin::ckeditor5.CKEditor"
     },
-    "kategoriyas": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::category.category",
-      "inversedBy": "tovaries"
+    "excert": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbar"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
     }
   }
 }
